@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "TwitBot",
+  "description": "A tool for managing Twitter",
+  "version": "1.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/"],
+      "js": ["library.js", "twitter.js"]
+    },
+    {
+      "matches": ["https://twitter.com/*/followers?a=f"],
+      "js": ["library.js", "follow.js"]
+    },
+    {
+      "matches": ["https://twitter.com/*/following?unfollow_nonfollowers"],
+      "js": ["library.js", "unfollow.js"]
+    }
+  ],
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+   ]
+}

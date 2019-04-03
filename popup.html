@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Plugin</title>
+    <script src="popup.js"></script>
+    <style>
+      .form-field {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TwitBot</h1>
+    <b>Username:</b> <span id="username"></span><br/>
+    <b>Following:</b> <span id="following"></span><br/>
+    <b>Followers:</b> <span id="followers"></span><br/>
+
+    <br/>
+
+    Follow target user's followers<br/>
+    <form action="#" id="addfollowers">
+      <div class="form-field">
+        <input type="text" id="inputfollowers" placeholder="username" size="11">
+        <img style="display:none; visibility:hidden" id="loader" src="./loading.gif" height="12" width="12">
+        <button id="addfollowbutton">Run</button>
+      </div><br/><br/>
+    </form>
+
+    <button id="unfollowbutton">Unfollow Non-Followers</button><br/><br/>
+  </body>
+</html>
